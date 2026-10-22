@@ -57,7 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Oct 21, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
   </head>
   
   
@@ -658,7 +658,7 @@
 </figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Chords-Web is made for <strong>educational and research purposes</strong>. It is not a medical device and must not be used for diagnosis.</p>
+<p>Chords-Web is made for <strong>educational and research purposes</strong>. It is not medical software and must not be used for diagnosis.</p>
 </div>
 </section>
 <section id="quick-start">
@@ -682,13 +682,50 @@
 <li><p><strong>Web Bluetooth API</strong>: to connect the NPG Lite over Bluetooth Low Energy (BLE).</p></li>
 <li><p><strong>WebUSB API</strong>: to update the firmware of some boards from the browser.</p></li>
 </ul>
-<p>These APIs are available in the latest versions of Chromium-based desktop browsers:</p>
+<p>Not every browser supports all three APIs, so some features may not work in your browser:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<colgroup>
+<col style="width: 28.0%" />
+<col style="width: 24.0%" />
+<col style="width: 24.0%" />
+<col style="width: 24.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Browser</strong></p></th>
+<th class="head"><p><strong>Serial (USB)</strong></p></th>
+<th class="head"><p><strong>Bluetooth (BLE)</strong></p></th>
+<th class="head"><p><strong>Firmware update</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Google Chrome, Microsoft Edge, Opera</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes (all boards)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mozilla Firefox</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>Some boards only</p></td>
+</tr>
+<tr class="row-even"><td><p>Safari</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>For all features, use the latest version of <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> or <strong>Opera</strong>.</p>
+<p>If your browser does not support the Web Serial API, Chords-Web shows a message telling you to switch to a supported browser.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Using Firefox?</strong> You can connect your board over <strong>Serial</strong> and use all the applications. But Firefox doesn’t support Web Bluetooth or WebUSB, so:</p>
 <ul class="simple">
-<li><p><strong>Google Chrome</strong></p></li>
-<li><p><strong>Microsoft Edge</strong></p></li>
-<li><p><strong>Opera</strong></p></li>
+<li><p>The <strong>BLE</strong> button won’t work, so you can’t connect the NPG Lite over Bluetooth. Connect it over Serial instead.</p></li>
+<li><p>The in-browser <a class="reference internal" href="#chords-firmware-update"><span class="std std-ref">firmware update</span></a> doesn’t work for boards that are flashed over WebUSB: Arduino UNO R4 Minima, Arduino GIGA R1, STM32G4 Core Board, STM32F4 Black Pill and Raspberry Pi Pico. Update these boards using Chrome/Edge or the Arduino IDE. Other boards can be updated in Firefox, because they are flashed over Web Serial.</p></li>
 </ul>
-<p>If your browser does not support the Web Serial API, Chords-Web shows a message telling you to switch to a supported browser. Firefox and Safari are not supported.</p>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Chords-Web works only on <strong>desktop/laptop</strong> computers. If you open it on a phone, you will see an “Oops! Mobile Detected” message.</p>
@@ -1435,7 +1472,7 @@ NPG Lite Flasher</div>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The ECG Visualizer is for learning and experiments only. It is not a medical device.</p>
+<p>The ECG Visualizer is for learning and experiments only. It is not medical software.</p>
 </div>
 </section>
 </section>
@@ -1856,7 +1893,7 @@ Local database for web applications.</p>
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Oct 21, 2026.
+  Last updated on Oct 22, 2026.
   <br/>
 </p></div>
       

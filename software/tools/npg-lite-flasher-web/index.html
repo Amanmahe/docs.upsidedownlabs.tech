@@ -57,7 +57,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
-    <meta name="docbuild:last-update" content="Oct 21, 2026"/>
+    <meta name="docbuild:last-update" content="Oct 22, 2026"/>
   </head>
   
   
@@ -721,12 +721,12 @@
 <td><p>Download and install</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Browser needed</strong></p></td>
-<td><p>Chrome, Edge or Opera</p></td>
-<td><p>Any</p></td>
+<td><p>Chrome, Edge, Opera or Firefox</p></td>
+<td><p>Not needed (it is a desktop app)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Best for</strong></p></td>
 <td><p>Quick flashing on any computer</p></td>
-<td><p>Offline use, or browsers without Web Serial</p></td>
+<td><p>Offline use, or when you don’t have a supported browser</p></td>
 </tr>
 </tbody>
 </table>
@@ -737,13 +737,18 @@
 <h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h2>
 <section id="browser">
 <h3>Browser<a class="headerlink" href="#browser" title="Link to this heading">#</a></h3>
-<p>NPG Lite Flasher Web uses the <strong>Web Serial API</strong>, which works in the latest versions of Chromium-based desktop browsers:</p>
+<p>NPG Lite Flasher Web uses the <strong>Web Serial API</strong>, which works in the latest versions of these desktop browsers:</p>
 <ul class="simple">
 <li><p><strong>Google Chrome</strong></p></li>
 <li><p><strong>Microsoft Edge</strong></p></li>
 <li><p><strong>Opera</strong></p></li>
+<li><p><strong>Mozilla Firefox</strong></p></li>
 </ul>
-<p>Firefox, Safari and mobile browsers are not supported.</p>
+<p>Safari and mobile browsers are not supported.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>NPG Lite Flasher Web only needs Web Serial, so it works fully in Firefox. Firefox doesn’t support Web Bluetooth or WebUSB, but the flasher doesn’t use them.</p>
+</div>
 </section>
 <section id="hardware">
 <h3>Hardware<a class="headerlink" href="#hardware" title="Link to this heading">#</a></h3>
@@ -1035,7 +1040,7 @@ sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> <
     <div class="footer-items__end">
       
         <div class="footer-item"><p class="last-updated">
-  Last updated on Oct 21, 2026.
+  Last updated on Oct 22, 2026.
   <br/>
 </p></div>
       
